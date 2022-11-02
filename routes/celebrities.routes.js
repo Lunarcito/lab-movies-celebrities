@@ -17,10 +17,10 @@ router.get("/create", (req, res) => {
     res.render("../views/celebrities/new-celebrity")
   })
   
-  router.post("/create", async(req, res) => {
+  router.post("/create", async (req, res) => {
     const {name, occupation, catchPhrase} = req.body;
     try {
-        await Celebrity.create(req.body)
+        const celebrity = await Celebrity.create(req.body)
         console.log("Celebrity created")
         res.redirect("/celebrities")
     } catch (err) {
