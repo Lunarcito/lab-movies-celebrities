@@ -1,0 +1,21 @@
+<div>
+    <h3 class="movie-details"> Movie Details </h3>
+    <h3> Title: {{details.title}}</h3>
+
+    <form action ="/celebrities/create" method="POST">
+    <label> 
+        Name:
+        <input type="text" name ="username">
+    </label>
+    <label> 
+        Ocupation:
+        <input type="text" name ="occupation">
+    </label>
+    <label>
+        Catch Prase:
+        <input type="text" name ="catchPrase">
+    </label>
+    
+    <button type="submit"> Create celebrity</button>
+    
+    </form>
