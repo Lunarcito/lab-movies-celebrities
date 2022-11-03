@@ -2,9 +2,9 @@
     <h2> Celebrities</h2>
     {{#each celebrities}}
     <li>
-        <a href="/celebrities/{{id}}">
-        <h4>{{username}}</h4>
-        </a>"
+        <a href="/celebrities/{{this.id}}">
+        <h4>{{this.name}}</h4>
+        </a>
     </li>
     {{/each}}
     <a href="/">Back to home</a>

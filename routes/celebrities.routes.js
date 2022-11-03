@@ -6,9 +6,10 @@ const Celebrity = require ("../models/Celebrity.model")
 
 router.get("/", async (req,res)=>{
     try{
-        const Celebrities = await Celebrity.find({})
-        res.render("../views/celebrities/new-celebrities",{celebrities})
-    } catch (err){
+        const celebrities = await Celebrity.find({})
+        res.render("../views/celebrities/celebrities",{celebrities})
+    } catch (err){      
+        console.log(req.body)
         console.log (err)
     }
 })
@@ -22,7 +23,7 @@ router.get("/create", (req, res) => {
     try {
         const celebrity = await Celebrity.create(req.body)
         console.log("Celebrity created")
-        res.redirect("/celebrities")
+        res.redirect("/")
     } catch (err) {
         console.log(err)
     }
