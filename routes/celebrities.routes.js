@@ -9,7 +9,6 @@ router.get("/", async (req,res)=>{
         const celebrities = await Celebrity.find({})
         res.render("../views/celebrities/celebrities",{celebrities})
     } catch (err){      
-        console.log(req.body)
         console.log (err)
     }
 })
